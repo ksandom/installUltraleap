@@ -1,6 +1,6 @@
-# Install UltraMotion Gemini
+# Install UltraMotion
 
-Ultramotion Gemini (F.K.A LeapMotion) still works really well in Linux, despite not having received an update for several years. The documentation and installation process, however, have aged a bit. This repo is here to solve that in a coherent way and will be provided to upstream.
+Ultramotion (F.K.A LeapMotion) still works really well in Linux, despite not having received an update for several years. The documentation and installation process, however, have aged a bit. This repo is here to solve that in a coherent way and will be provided to upstream.
 
 These instructions match SDK version Version 2.3.1, which is current on Linux and Mac as at 2021-11-04. Windows is currently on 5.2.0.
 
