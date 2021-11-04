@@ -1,6 +1,6 @@
 # Install UltraMotion Gemini
 
-Ultramotion Gemini (F.K.A LeapMotion) still works really well in Linux, despite not having received an update for several years. The documentation and installation process, however, have aged a bit. This repo is here to solve that and will be provided to upstream.
+Ultramotion Gemini (F.K.A LeapMotion) still works really well in Linux, despite not having received an update for several years. The documentation and installation process, however, have aged a bit. This repo is here to solve that in a coherent way and will be provided to upstream.
 
 These instructions match SDK version Version 2.3.1, which is current on Linux and Mac as at 2021-11-04. Windows is currently on 5.2.0.
 
@@ -57,6 +57,12 @@ TODO Test others.
 
 ## Make the service start
 
+1. Run `git clone git@github.com:ksandom/installUltraMotion.git` or `git clone https://github.com/ksandom/installUltraMotion.git` to get the systemd unit file.
+1. Run `cd installUltraMotion` to get into the repo directory.
+1. Run `sudo ./scripts/setupSystemd` to set it up so that it will start at boot.
+1. Run `sudo systemctl start leapd` to start it now.
+1. \[optional\] Run `sudo journalctl -fu leapd` to see logs.
+
 ## Testing it
 
 Running `LeapControlPanel` is more or less broken on anything I try. This is explained well in the README.
@@ -67,3 +73,5 @@ From there, there are various things of interest. I want to highlight
 
 * "Diagnostic Visualizer" on the "Troubleshooting" tab, which shows you what your device is reporting. (Also great fun to play with.)
 * "Show Software Log" on the "Troubleshooting" tab, which tells you why something is or is not working.
+
+You can also run `sudo journalctl -fu leapd` to see the log.

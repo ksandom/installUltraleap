@@ -1,0 +1,16 @@
+#!/bin/bash
+# Set up the systemd unit. Requires root.
+
+if [ ! -e misc/leapd.service ]; then
+  echo "This script should be run in the root directory of the repo, where you can see the misc/ and scripts/ directories."
+  exit 1
+fi
+
+# Place the unit file.
+mkdir -p /etc/systemd/system
+cp misc/leapd.service /etc/systemd/system
+
+# Tell systemd that it is there.
+systemctl daemon-reload
+
+systemctl enable leapd

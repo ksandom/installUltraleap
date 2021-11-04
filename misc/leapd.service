@@ -1,0 +1,14 @@
+[Unit]
+Description=Leapmotion daemon
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5
+User=root
+ExecStart=/sbin/leapd --run
+
+[Install]
+WantedBy=multi-user.target
