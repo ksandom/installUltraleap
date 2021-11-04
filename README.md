@@ -13,10 +13,10 @@ These instructions match SDK version Version 2.3.1, which is current on Linux an
 
 1. [Download and unpack the SDK](#download-and-unpack-the-sdk).
 1. Install.
-  * [Install on deb based distros](#install-on-deb-based-distros). (Eg Ubuntu and Debian)
-  * [Install on RPM based distros](#install-on-RPM-based-distros). (Eg OpenSuSE and Fedora)
+    * [Install on deb based distros](#install-on-deb-based-distros). (Eg Ubuntu and Debian)
+    * [Install on RPM based distros](#install-on-RPM-based-distros). (Eg OpenSuSE and Fedora)
 1. [Make the service start](#make-the-service-start).
-1. [Testing it](#testing it).
+1. [Testing it](#testing-it).
 1. [More documentation](https://developer.leapmotion.com).
 
 ## Download and unpack the SDK
@@ -41,11 +41,17 @@ TODO I haven't tested this in several years. Test this.
 
 ### Install on RPM based distros
 
+Derived from the packaged instructions.
+
 Tested on
 
-* [OpenSuSE](https://www.opensuse.org/) Tumbleweed .
+* [OpenSuSE](https://www.opensuse.org/) Tumbleweed on 2021-11-04.
+
+TODO Test others.
 
 1. Install [alien](https://software.opensuse.org/package/alien) if you haven't already. - This converts the debs to RPMs that you can install.
+    * OpenSuSE: Choose [a package](https://software.opensuse.org/package/alien).
+    * Fedora: `sudo yum install alien`
 1. Convert the debs by running `sudo alien -rv --scripts Leap-*-x64.deb`
 1. Install the RPMs by running `sudo alien -rv --scripts Leap-*-x64.deb`
 
