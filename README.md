@@ -58,3 +58,12 @@ TODO Test others.
 ## Make the service start
 
 ## Testing it
+
+Running `LeapControlPanel` is more or less broken on anything I try. This is explained well in the README.
+
+Instead you can run `LeapControlPanel --showsettings`
+
+From there, there are various things of interest. I want to highlight
+
+* "Diagnostic Visualizer" on the "Troubleshooting" tab, which shows you what your device is reporting. (Also great fun to play with.)
+* "Show Software Log" on the "Troubleshooting" tab, which tells you why something is or is not working.
