@@ -53,7 +53,7 @@ TODO Test others.
     * OpenSuSE: Choose [a package](https://software.opensuse.org/package/alien).
     * Fedora: `sudo yum install alien`
 1. Convert the debs by running `sudo alien -rv --scripts Leap-*-x64.deb`
-1. Install the RPMs by running `sudo rpm -ivh --nodeps --force leap-*-2-x86_64.rpm`
+1. Install the RPMs by running `sudo rpm -ivh --nodeps --force leap-*x86_64.rpm`
 
 ## Make the service start
 
