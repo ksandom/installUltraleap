@@ -67,7 +67,7 @@ TODO Test others.
 
 ## Testing it
 
-Running `LeapControlPanel` is more or less broken on anything I try. This is explained well in the package README.
+Running `LeapControlPanel` is more or less broken on anything I try, but sometimes works. This is explained well in the package README.
 
 Instead you can run `LeapControlPanel --showsettings`
 
