@@ -1,0 +1,13 @@
+[Unit]
+Description=Restart the Leapmotion daemon on resume to make it reliable.
+After=suspend.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=oneshot
+User=root
+TimeoutSec=0
+ExecStart=/usr/bin/systemctl restart leapd
+
+[Install]
+WantedBy=suspend.target

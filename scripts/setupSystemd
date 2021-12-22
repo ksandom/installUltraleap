@@ -9,13 +9,14 @@ fi
 
 # Place the unit file.
 mkdir -p /etc/systemd/system
-cp misc/leapd.service /etc/systemd/system
+cp misc/leapd.service misc/leapd-resume.service /etc/systemd/system
 
 # Tell systemd that it is there.
 systemctl daemon-reload
 
 # Enable it to start on boot.
 systemctl enable leapd
+systemctl enable leapd-resume
 
 # Start it now. Disabled to give clarity on where things went wrong if things didn't go according to plan.
 #systemctl start leapd

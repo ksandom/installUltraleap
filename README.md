@@ -63,13 +63,12 @@ TODO Test others.
 1. Run `cd installUltraMotion` to get into the repo directory.
 1. Run `sudo ./scripts/setupSystemd` to set it up so that it will start at boot.
 1. Run `sudo systemctl start leapd` to start it now.
+1. Run `sudo systemctl start leapd-resume` to make it automatically restart when your computer resumes from suspend. This is to work-around the device not always coming back into a useable state after suspend.
 1. \[optional\] Run `sudo journalctl -fu leapd` to see logs.
 
 ## Testing it
 
-Running `LeapControlPanel` is more or less broken on anything I try, but sometimes works. This is explained well in the package README.
-
-Instead you can run `LeapControlPanel --showsettings`
+If running `LeapControlPanel` is broken for you (This is explained well in the package README.); You can run `LeapControlPanel --showsettings`
 
 From there, there are various things of interest. I want to highlight:
 
