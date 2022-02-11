@@ -1,37 +1,40 @@
-# Install UltraMotion
+# Install Ultraleap
 
-Ultramotion (F.K.A LeapMotion) still works really well in Linux, despite not having received an update for several years. The documentation and installation process, however, have aged a bit. This repo is here to solve that in a coherent way and will be provided to upstream.
+These are instructions for getting the LeapMotion SDK 2.3.1 working on Linux, Windows, and MacOS. This is for use with applications that require it to interact with the LeapMotion controller.
 
-These instructions match SDK version 2.3.1, which is current on Linux and Mac as at 2021-11-04. Windows is currently on 5.2.0.
+Ultraleap (F.K.A LeapMotion) still works really well in Linux and Windows, despite not having received an update for several years. The documentation and installation process, however, have aged a bit. This repo is here to solve that in a coherent way and will be provided to upstream.
+
+These instructions match SDK version 2.3.1, which is currently the newest version on Linux and Mac as at 2021-11-04 (Windows is currently on 5.3.1). It is also the latest version that is known to support Java, and is still downloadable.
 
 ## Problems that this repo fixes
 
 * Reliably starting and stopping the service via systemd.
 * Installation on other Linux distros.
 
-## Overview
+Ultraleap are welcome to incorporate and/all of this into their instructions that they ship with the SDK.
 
-1. [Download and unpack the SDK](#download-and-unpack-the-sdk).
-1. Install.
-    * [Install on deb based distros](#install-on-deb-based-distros). (Eg Ubuntu and Debian)
-    * [Install on RPM based distros](#install-on-RPM-based-distros). (Eg OpenSuSE and Fedora)
-1. [Make the service start](#make-the-service-start).
-1. [Testing it](#testing-it).
+## Links
+
 1. [More documentation](https://developer.leapmotion.com).
 
 ## Download and unpack the SDK
 
 NOTE that downloading the SDK requires an account, which at the time of this writing, is free.
 
-1. Go to [https://developer.leapmotion.com/](https://developer.leapmotion.com/).
-1. Click "Download Ultraleap Gemini".
-1. Choose your operating system. (These instructions assume Linux.)
-1. Run `tar xzf Leap_Motion_SDK_Linux_2.3.1.tgz`
-1. Run `cd LeapDeveloperKit_2.3.1+31549_linux`
+1. Go to [Legacy releases](https://developer.leapmotion.com/releases). There are several packages on the same page.
+1. You need "TRACKING SOFTWARE ____ 2.3.1" (Replace ____ with Linux/Windows/MacOS).
+1. Follow on either [Linux](#Linux), [Windows](#Windows), or [MacOS](#MacOS).
 
 ## Install
 
-### Install on deb based distros
+### Linux
+
+#### Unpack the archive
+
+1. Run `tar xzf Leap_Motion_SDK_Linux_2.3.1.tgz`
+1. Run `cd LeapDeveloperKit_2.3.1+31549_linux`
+
+#### Install on deb based distros
 
 The packaged instructions should work as described.
 
@@ -39,7 +42,7 @@ The packaged instructions should work as described.
 
 TODO I haven't tested this in several years. Test this.
 
-### Install on RPM based distros
+#### Install on RPM based distros
 
 Derived from the packaged instructions.
 
@@ -55,18 +58,18 @@ TODO Test others.
 1. Convert the debs by running `sudo alien -rv --scripts Leap-*-x64.deb`
 1. Install the RPMs by running `sudo rpm -ivh --nodeps --force leap-*x86_64.rpm`
 
-## Make the service start
+#### Make the service start
 
 1. Run one of these two to get the systemd unit file and script to install it.
-    * `git clone git@github.com:ksandom/installUltraMotion.git`
-    * `git clone https://github.com/ksandom/installUltraMotion.git`
-1. Run `cd installUltraMotion` to get into the repo directory.
+    * `git clone git@github.com:ksandom/installUltraleap.git`
+    * `git clone https://github.com/ksandom/installUltraleap.git`
+1. Run `cd installUltraleap` to get into the repo directory.
 1. Run `sudo ./scripts/setupSystemd` to set it up so that it will start at boot.
 1. Run `sudo systemctl start leapd` to start it now.
 1. Run `sudo systemctl start leapd-resume` to make it automatically restart when your computer resumes from suspend. This is to work-around the device not always coming back into a useable state after suspend.
 1. \[optional\] Run `sudo journalctl -fu leapd` to see logs.
 
-## Testing it
+#### Testing it
 
 If running `LeapControlPanel` is broken for you (This is explained well in the package README.); You can run `LeapControlPanel --showsettings`
 
@@ -76,3 +79,59 @@ From there, there are various things of interest. I want to highlight:
 * "Show Software Log" on the "Troubleshooting" tab, which tells you why something is or is not working.
 
 You can also run `sudo journalctl -fu leapd` to see the log.
+
+#### Libraries for java applications
+
+The files that you will need for java applications are located in:
+
+* LeapSDK/lib:
+    * LeapJava.jar
+* LeapSDK/lib/x64:
+    * libLeapJava.so
+    * libLeap.so
+
+Copy these to the lib directory that the java application specifies.
+
+### Windows
+
+#### Install it
+
+1. Unpack the .zip file.
+1. Run `Leap_Motion_Installer_release_public_win_x86_2.3.1+31549_ah1886.exe`.
+
+#### Libraries for java applications
+
+The files that you will need for java applications are located in:
+
+* LeapSDK\\lib:
+    * LeapJava.jar
+* LeapSDK\\lib\\x64:
+    * Leap.dll
+    * LeapJava.dll
+    * Leap.lib
+
+Copy these to the lib directory that the java application specifies.
+
+### MacOS
+
+NOTE1: I have not tested this.
+
+NOTE2: There is a note on [the download page](https://developer.leapmotion.com/tracking-software-download) that reads:
+> Not compatible with macOS Monterey
+
+1. Unpack the .tgz file.
+1. Instructions from the README.txt:
+    1. Open Leap_Motion_Installer_version.dmg
+    1. Run Leap Motion.pkg
+
+
+#### Libraries for java applications
+
+The files that you will need for java applications are located in:
+
+* LeapSDK/lib:
+    * LeapJava.jar
+    * libLeap.dylib
+    * libLeapJava.dylib
+
+Copy these to the lib directory that the java application specifies.
