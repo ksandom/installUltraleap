@@ -8,25 +8,7 @@ Ultraleap (F.K.A LeapMotion) still works really well in Linux and Windows, despi
 
 These instructions match SDK version 2.3.1, which is currently the newest version on Linux and Mac as at 2021-11-04 (Windows is currently on 5.3.1). It is also the latest version that is known to support Java, and is still downloadable.
 
-* [Install Ultraleap](#install-ultraleap)
-    * [Problems that this repo fixes](#problems-that-this-repo-fixes)
-    * [Links](#links)
-    * [Download and unpack the SDK](#download-and-unpack-the-sdk)
-    * [Install](#install)
-        * [Linux](#linux)
-            * [Unpack the archive](#unpack-the-archive)
-            * [Install on deb based distros](#install-on-deb-based-distros)
-            * [Install on RPM based distros](#install-on-rpm-based-distros)
-            * [Make the service start](#make-the-service-start)
-            * [Testing it](#testing-it)
-            * [Libraries for java applications](#libraries-for-java-applications)
-        * [Windows](#windows)
-            * [Install it](#install-it)
-            * [Libraries for java applications](#libraries-for-java-applications)
-        * [MacOS](#macos)
-            * [Libraries for java applications](#libraries-for-java-applications)
-
-<!-- table of contents created by Adrian Bonnet, see https://Relex12.github.io/Markdown-Table-of-Contents for more -->
+[TOC]
 
 ## Problems that this repo fixes
 
