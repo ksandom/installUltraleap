@@ -8,6 +8,8 @@ Ultraleap (F.K.A LeapMotion) still works really well in Linux and Windows, despi
 
 These instructions match SDK version 2.3.1, which is currently the newest version on Linux and Mac as at 2021-11-04 (Windows is currently on 5.3.1). It is also the latest version that is known to support Java, and is still downloadable.
 
+## Table of contents
+
 [TOC]
 
 ## Problems that this repo fixes
