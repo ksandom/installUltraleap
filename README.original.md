@@ -17,7 +17,7 @@ These instructions match SDK version 2.3.1, which is currently the newest versio
 * Reliably starting and stopping the service via systemd.
 * Installation on other Linux distros.
 
-Ultraleap are welcome to incorporate and/all of this into their instructions that they ship with the SDK.
+Ultraleap are welcome to incorporate any/all of this into their instructions that they ship with the SDK.
 
 ## Links
 
