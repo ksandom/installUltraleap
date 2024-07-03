@@ -27,11 +27,11 @@ Ultraleap are welcome to incorporate and/all of this into their instructions tha
 
 NOTE that downloading the SDK requires an account, which at the time of this writing, is free.
 
-1. Go to [Legacy releases](https://developer.leapmotion.com/releases). There are several packages on the same page.
+1. Go to [Downloads](https://leap2.ultraleap.com/downloads/), and login.
 1. You need "TRACKING SOFTWARE ____ 2.3.1" (Replace ____ with Linux/Windows/MacOS).
-    * [Linux](https://developer.leapmotion.com/releases/linux-2-3-1)
-    * [Windows](https://developer.leapmotion.com/releases/windows-2-3-1)
-    * [MacOS](https://developer.leapmotion.com/releases/mac-2-3-1)
+    * [Linux](https://leap2.ultraleap.com/download/software?name=tracking-software&version=2.3.1&platform=linux)
+    * [Windows](https://leap2.ultraleap.com/download/software?name=tracking-software&version=2.3.1&platform=windows)
+    * ~~[MacOS](https://developer.leapmotion.com/releases/mac-2-3-1)~~ - [More info](https://github.com/ksandom/installUltraleap/issues/1#issuecomment-2204932007).
 1. Follow on either [Linux](#Linux), [Windows](#Windows), or [MacOS](#MacOS).
 
 ## Install
